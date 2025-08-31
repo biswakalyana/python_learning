@@ -1,0 +1,42 @@
+all_grocery_items = {}
+all_item_prices = []
+
+##   Ask user input for how many items the user wants to add. Store it as integer.
+number_of_items = int(input("Enter number of items to be stored: "))
+
+## In a loop, ask for the name and price of each item.
+counter = 0
+while counter < number_of_items:
+    # take user inputs of each item
+    name = input("Enter item name: ")
+    price = int(input("Enter price of item : "))
+
+    # Enter the item in dictionary
+    all_grocery_items[name] = price
+
+    #Append price to the list of prices
+    all_item_prices.append(price)
+
+    # increase counter
+    counter = counter + 1
+
+#sum = 0
+# for key in all_grocery_items :
+#     print(f"Price of grocery item {key} is {all_grocery_items[key]}.")
+#     #sum = sum + all_grocery_items[key]
+
+#print(sum)
+print(all_item_prices)
+print(f"Total cost of all items = {sum(all_item_prices)}")
+
+# FInd max and min value from list using the List functions
+least_item_price = min(all_item_prices)
+max_item_price = max(all_item_prices)
+
+
+for key in all_grocery_items:
+    ## Compare using === operator to find which item has max or min value
+    if all_grocery_items[key] == max_item_price:
+        print(f"Item {key} has maximum price {all_grocery_items[key]}")
+    if all_grocery_items[key] == least_item_price:
+        print(f"Item {key} has the least price {all_grocery_items[key]}")

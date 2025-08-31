@@ -1,0 +1,31 @@
+all_students_scores = {
+  "Sateesh" : {
+   	 "math" : 56,
+	 "science" : 78,
+     "history" : 23,
+     "geography" : 78
+  },
+  "biswa" : {
+     "math" : 67,
+	 "science" : 89,
+     "history" : 63,
+     "geography" : 78
+  }
+}
+
+total_scores = {}
+
+for student in all_students_scores :
+    total_score = 0
+    for subject in all_students_scores[student]:
+        # calculate total score
+        total_score = total_score + all_students_scores[student][subject]
+        
+        #look for failed mark
+        if all_students_scores[student][subject] < 30:
+            print(f"{student} has failed in {subject}")
+        
+    #print(f"Total score of {student} is {total_score}")
+    total_scores[student] = total_score
+
+print(total_scores)
