@@ -45,3 +45,5 @@ for subject in subjects:
             top_student = student_name
     
     print(f"{subject} Topper: {top_student} {top_score} marks)")
+
+print("Student report ended")
